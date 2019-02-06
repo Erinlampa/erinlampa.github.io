@@ -1,2 +1,0 @@
-# erinlampa.github.io
-Website
