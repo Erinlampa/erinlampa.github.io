@@ -1,9 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
 
-  <title>The Squatch Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Sasquatch Sightings Map</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../static/css/_variables.scss">
+
+    <link rel="stylesheet" href="../static/css/_bootswatch.scss">
 
 
     
@@ -49,11 +68,11 @@
 <script src="{{ url_for('static', filename='../static/js/leaflet.extra-markers.min.js') }}"></script>
 
 <!-- API key -->
-<script type="text/javascript" src="{{ url_for('static', filename='../static/js/config.js') }}"></script>
-<script src="{{ url_for('static', filename='../static/js/logic.js') }}"></script>
+<script type="text/javascript" src="../static/js/config.js"></script>
+<script src="../static/js/logic.js"></script>
 
 <!-- Leaflet heatmap plugin-->
-<script type="text/javascript" src="{{ url_for('static', filename='../static/js/leaflet-heat.js') }}"></script> 
+<script type="text/javascript" src="../static/js/leaflet-heat.js"></script> 
       <!--ADD Dave's PLOT HERE-->
         
       <div id="map"></div>
