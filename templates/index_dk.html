@@ -5,16 +5,7 @@
 
   <title>The Squatch Story</title>
 
-  <!-- Dave's Scripts for map -->
 
-<script src="{{ url_for('static', filename='js/leaflet.extra-markers.min.js') }}"></script>
-
-<!-- API key -->
-<script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
-<script src="{{ url_for('static', filename='js/logic.js') }}"></script>
-
-<!-- Leaflet heatmap plugin-->
-<script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script> 
     
 <!--Dave Specific Leaflet Stuff-->  
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
@@ -36,10 +27,8 @@
     <a class="navbar-brand" href="#">The Sasquatch Story</a>
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index_el.html">Their Story <span class="sr-only">(current)</span></a>
-          </li>
-                 <li class="nav-item">
+          
+           <li class="nav-item">
               <a class="nav-link" href="http://www.bfro.net/GDB/submitfm.asp"  target="_blank">Report  a Sighting</a>
             </li>
           <li class="nav-item">
@@ -55,7 +44,16 @@
           </ul>
 </nav>
 <!--End Navbar-->
+  <!-- Dave's Scripts for map -->
 
+<script src="{{ url_for('static', filename='../static/js/leaflet.extra-markers.min.js') }}"></script>
+
+<!-- API key -->
+<script type="text/javascript" src="{{ url_for('static', filename='../static/js/config.js') }}"></script>
+<script src="{{ url_for('static', filename='../static/js/logic.js') }}"></script>
+
+<!-- Leaflet heatmap plugin-->
+<script type="text/javascript" src="{{ url_for('static', filename='../static/js/leaflet-heat.js') }}"></script> 
       <!--ADD Dave's PLOT HERE-->
         
       <div id="map"></div>
