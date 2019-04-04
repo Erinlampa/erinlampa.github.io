@@ -4,6 +4,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>The Squatch Story</title>
+
+  <!-- Dave's Scripts for map -->
+
+<script src="{{ url_for('static', filename='js/leaflet.extra-markers.min.js') }}"></script>
+
+<!-- API key -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
+<script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+
+<!-- Leaflet heatmap plugin-->
+<script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script> 
     
 <!--Dave Specific Leaflet Stuff-->  
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
@@ -49,16 +60,7 @@
         
       <div id="map"></div>
 
-<!-- Dave's Scripts for map -->
 
-<script src="{{ url_for('static', filename='js/leaflet.extra-markers.min.js') }}"></script>
-
-<!-- API key -->
-<script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
-<script src="{{ url_for('static', filename='js/logic.js') }}"></script>
-
-<!-- Leaflet heatmap plugin-->
-<script type="text/javascript" src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script> 
 
 
 
