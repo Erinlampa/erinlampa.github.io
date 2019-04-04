@@ -28,20 +28,30 @@
 
 <body>
 
-<!--Begin Navbar-->
+<!-- begin navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">The Sasquatch Story</a>
-        <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                  <a class="nav-link" href="http://www.bfro.net/GDB/submitfm.asp"  target="_blank">Report  a Sighting</a>
+    <a class="navbar-brand" href="#">The Sasquatch Story</a>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active"> -->
+            <a class="nav-link" href="index_el.html">Their Story <span class="sr-only">(current)</span></a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://www.bfro.net/GDB/submitfm.asp"  target="_blank">Report a Sighting</a>
                 </li>
-               
-            </ul>
-            </div>   
-          
-      </nav>
-    <!--End Navbar-->
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/index_kw.html">Sightings by Year</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/index_jm.html">Sightings by Month/Day</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/index_dk.html">Sightings Map</a>
+            </li>  
+        </ul>
+    </nav>
+<!-- end navbar -->
+
 
 
   <!-- Creates the Overall Grid -->
@@ -129,13 +139,15 @@
                         </a>
                       </div>
                       <div class="tab-pane fade show" id="when"></br>
-                          <p>Daytime, night time, spring, summer or fall...? When is the best time to go squatch hunting. Click on the image below for an interactive graph of when the most sightings have occurred.</p>
-                        </div>
+                         
+                      <p>Daytime, night time, spring, summer or fall...? When is the best time to go squatch hunting. Click on the image below for an interactive graph of when the most sightings have occurred.</p>
+                      <img src="../images/jm.png">
+                    </div>
                         <div class="tab-pane fade show" id="trends" ></br>
                             <p>What has caused the upward trend in Sasquatch Sightings? Could it possibly be....<strong>The Internet?</strong></p>
                             <img src="../images/media.png" height="100">
                             <a href="../templates/index_kw.html" target="_blank" data-toggle="tooltip" data-placement="top" title="Click to see a full interactive trend report">
-                              <img src="../images/sightings.png" width="720" height="350">
+                              <img src="../images/sightings.png" width="720">
                             </a>
                           </div>
                       
