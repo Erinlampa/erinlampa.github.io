@@ -21,7 +21,7 @@ var icons = {
 };
 
 // Retrieve CSV data
-d3.csv("data/bfro_reports_geocoded.csv", function(data) {
+d3.csv("../../data/bfro_reports_geocoded.csv", function(data) {
   console.log(data);
   createMap(data);
 });
