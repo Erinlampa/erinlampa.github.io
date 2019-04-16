@@ -1,71 +1,83 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <title>The Squatch Story</title>
-
-    <!-- Bring in our bootstrap stylesheet -->
-         
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sasquatch Sightings by Year</title>
+  <!-- Bring in our bootstrap stylesheet -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/bootstrap.css">
     <link rel="stylesheet" href="../static/css/_variables.scss">
     <link rel="stylesheet" href="../static/css/_bootswatch.scss">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
-
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
   
+  <!-- Plotly script source -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!--D3 cdn-->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 
 </head>
 
 <body>
-
-<!-- begin navbar -->
-<div class="col-sm-12"  >
+<!--Begin Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">The Sasquatch Story</a>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-        <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active"> -->
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="http://www.bfro.net/GDB/submitfm.asp"  target="_blank">Report a Sighting</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../templates/index_kw.html">Sightings by Year</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../templates/index_jm.html">Sightings by Month/Day</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="../templates/index_dk.html">Sightings Map</a>
-            </li>  
-        </ul>
-      
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  <button type="button" class="btn btn-info">Plots</button>
-  <div class="btn-group" role="group">
-    <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-      <a class="dropdown-item" href="../templates/index_kw.html">Sightings by Year</a>
-      <a class="dropdown-item" href="../templates/index_jm.html">Sightings by Month/Day</a>
-      <a class="dropdown-item" href="../templates/index_dk.html">Sightings Map</a>
-      <a class="dropdown-item" href="http://www.bfro.net/GDB/submitfm.asp"  target="_blank">Report a Sighting</a>
-    </div>
+    <a class="navbar-brand" href="https://erinlampa.github.io/">The Sasquatch Story</a>
+    
+ <!--
+
+  
+               <div class="btn-group" role="group" aria-label="Button group with nested dropdown" >
+                 <button type="button" class="btn btn-info">Plots</button>
+             <div class="btn-group" role="group">
+              <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+                  <ul class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="../templates/index_kw.html">Sightings by Year</a>
+                <a class="dropdown-item" href="../templates/index_jm.html">Sightings by Month/Day</a>
+                <a class="dropdown-item" href="../templates/index_dk.html">Sightings Map</a>
+                <a class="dropdown-item" href="http://www.bfro.net/GDB/submitfm.asp">Report a Sighting</a>
+             
+                         </div>
+            </div>
+          </div>
+ --> 
+
+ <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown" >
+            <button type="button" class="btn btn-info">Plots</button>
+        <div class="btn-group" role="group">
+         <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+         <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+             <ul class="dropdown-menu dropdown-menu-right">
+           <a class="dropdown-item" href="../templates/index_kw.html">Sightings by Year</a>
+           <a class="dropdown-item" href="../templates/index_jm.html">Sightings by Month/Day</a>
+           <a class="dropdown-item" href="../templates/index_dk.html">Sightings Map</a>
+           <a class="dropdown-item" href="../templates/compare.html">Compare Plots</a>
+           <a class="dropdown-item" href="../static/data/data.json">Data from BFRO</a>
+           <a class="dropdown-item" href="http://www.bfro.net/GDB/submitfm.asp">Report a Sighting</a>
+        
+                    </div>
+       </div>
+     </div>
+    </span>
   </div>
-</div>
-      
-    </nav>
-  </div>
-<!-- end navbar -->
+
+  </nav>
+<!--End Navbar-->
 
 
 
